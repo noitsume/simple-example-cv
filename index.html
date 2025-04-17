@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <!-- 231111131 -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+      html{
+        font-family: 'Montserrat';
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background-image: url(assets/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        overflow-x: hidden;
+        
+      }
+      hr{
+        border: 1px solid rgba(0, 0, 0, 0.582);
+      }
+      
+      .container-wide {
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+        max-width: 90%;
+      }
+
+      .profile-section {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #1c1c1c;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        min-height: 80vh;
+        padding: 25px;
+      }
+
+      .col-md-4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image-container {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-right: 10px;
+        box-shadow: 25px 0px 20px 5px #161616a8;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        padding: 25px 10px;
+        border-radius: 0 0 10px 10px;
+        color: white;
+        text-align: center;
+      }
+
+      .profile-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-tabs {
+        margin-bottom: 1rem;
+      }
+
+      .profile-text {
+        color: white;
+        font-size: 13px;
+      }
+      
+      .progress {
+        height: 8px;
+        background-color: #333;
+      }
+
+      .progress-bar {
+        background-image: linear-gradient(to right, red, blue);
+      }
+
+      .skill-label {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 14px;
+        color: white;
+        margin-bottom: 5px;
+      }
+      .section {
+        background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0, 0, 255, 0.651));
+        text-align: center;
+        color: white;
+        
+      }
+      .footer {
+        background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(0, 255, 255, 0.534));
+        text-align: center;
+        color: white;
+        
+      }
+    @media (min-width: 1px) {
+    .container-wide {
+        max-width: 85%;
+    }
+    .profile-text {
+        text-align: center;
+    }
+    .image-container {
+        margin-bottom: 20px;
+    }
+    .nav-tabs .nav-link {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+    }
+
+    @media (min-width: 768px) {
+    .container-wide {
+        max-width: 90%;
+    }
+    .profile-text {
+        text-align: start;
+    }
+    .image-container {
+        margin-bottom: 0px;
+    }
+    
+    }
+  
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 2,
+    'opsz' 20
+    }
+
+    </style>
+
+    <title>CV Kevin Gultom</title>
+  </head>
+  <body>
+    <div class="container-wide">
+      <div class="profile-section row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="assets/poto.jpeg" alt="My Photo" class="profile-image img-fluid">
+            <div class="image-overlay">
+              <p class="font-weight-bold mb-1">Kevin Luther</p>
+              <p class="text-primary mb-2">Full Stack Developer</p>
+              <hr>
+              <a href="https://www.linkedin.com/in/yourprofile" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="https://wa.me/62895883422221" class="text-white mx-2"><i class="fab fa-whatsapp fa-2x"></i></a>
+              <a href="https://github.com/noitsume" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
+              <a href="https://www.facebook.com/yourusername" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="profile-text-wrapper">
+            <!-- check on line 306 -->
+            <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="hobbies-tab" data-toggle="tab" href="#hobbies" role="tab">Hobbies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="achievements-tab" data-toggle="tab" href="#achievements" role="tab">Achievements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="AdditionalInformation-tab" data-toggle="tab" href="#AdditionalInformation" role="tab">Additional Information</a>
+              </li>
+            </ul>
+
+            <div class="profile-text tab-content" id="profileTabsContent">
+              <div class="tab-pane fade show active" id="about" role="tabpanel">
+                <h1>About me</h1>
+                <p class="text-primary">3 years in design / 6 years in coding / 10 years as coach</p>
+                <p>I am a developer with a passion for building applications and solving real-world problems.</p>
+                <p>My skills include web and mobile development using React, Node.js, and Flutter.</p>
+                <p>I have learned Python, C++, C#, JavaScript, PHP, and SQL.</p>
+
+                <hr>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                  <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="row">
+                          &nbsp;&nbsp;&nbsp;<img src="assets/education.png" alt="My Photo" style="width: 40px; height: 40px;">
+                          <h2>&nbsp;Education </h2>
+                          </div> 
+                      </div>
+                  </div>
+                  <ul>
+                    <li>Primary School : SD Freemethodist | 2010 - 2016</li>
+                    <li>Junior High School : SMP Freemethodist | 2017 - 2020</li>
+                    <li>High School : SMK Freemethodist | 2020 - 2023</li>
+                  </ul>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="row" >
+                        <div class="col-md-7 mb-4">
+                          <div class="row" style="display:flex; flex-direction: row;">
+                            &nbsp;&nbsp;&nbsp;<img src="assets/work icon.png" alt="My Photo" style="width: 40px; height: 40px;">
+                            <h2>&nbsp;Work Experience </h2>
+                            </div> 
+                        </div>
+                    </div>
+                    <ul>
+                    <li>Canva Poster Design</li>
+                    <li>Freelance Programmer</li>
+                    <li>UI/UX Game Design</li>
+                    <li>E-sport Coach</li>
+                    </ul>
+                  </div>
+                </div>
+                <hr>
+                <div  class="row">
+                    <div class="col-md-6 mb-4">
+                       <div class="row">
+                        &nbsp;&nbsp;&nbsp;<img src="assets/skilllogo.png" alt="My Photo" style="width: 40px; height: 40px;">
+                        <h2>&nbsp;Skills </h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-label">Web Development <span>91%</span></div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 91%;"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-label">Back end <span>82%</span></div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 82%;"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-label">Database <span>90%</span></div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-label">UI/UX design <span>91%</span></div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 91%;"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-label">Graphic Design <span>90%</span></div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="hobbies" role="tabpanel">
+                <h2>Hobbies</h2>
+                <ul>
+                  <li>Playing competitive games</li>
+                  <li>Graphic Design and UI/UX mockups</li>
+                  <li>Reading tech articles and learning new frameworks</li>
+                  <li>Coaching and team strategy planning in e-sports</li>
+                  <li>Messing around the code | either creativity or obliterate the code</li>
+                </ul>
+              </div>
+
+              <div class="tab-pane fade" id="achievements" role="tabpanel">
+                <h2>Achievements</h2>
+                <ul>
+                  <li>Top 10 National E-sport Coach (Ahtong E-sport)</li>
+                  <li>Winner of Local Hackathon 2023 (React + Firebase)</li>
+                  <li>Designed 100+ client projects as freelance developer</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="AdditionalInformation" role="tabpanel">
+                <h2>Additional Information</h2>
+                <ul>
+                  <li><a href="https://www.google.com/maps/place/Medan,+North+Sumatra,+Indonesia" target="_blank" rel="noopener noreferrer" class="detail">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#0000F5"><path d="M480.21-480Q510-480 531-501.21t21-51Q552-582 530.79-603t-51-21Q450-624 429-602.79t-21 51Q408-522 429.21-501t51 21ZM480-191q119-107 179.5-197T720-549q0-105-68.5-174T480-792q-103 0-171.5 69T240-549q0 71 60.5 161T480-191Zm0 95Q323.03-227.11 245.51-339.55 168-452 168-549q0-134 89-224.5T479.5-864q133.5 0 223 90.5T792-549q0 97-77 209T480-96Zm0-456Z"/></svg>Location : Medan City - Indonesia
+                    </a></li>
+                  <li>
+                    
+                    <a href="https://wa.me/62895883422221" >
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#0000F5"><path d="M763-145q-121-9-229.5-59.5T339-341q-86-86-135.5-194T144-764q-2-21 12.29-36.5Q170.57-816 192-816h136q17 0 29.5 10.5T374-779l24 106q2 13-1.5 25T385-628l-97 98q20 38 46 73t57.97 65.98Q422-361 456-335.5q34 25.5 72 45.5l99-96q8-8 20-11.5t25-1.5l107 23q17 5 27 17.5t10 29.5v136q0 21.43-16 35.71Q784-143 763-145ZM255-600l70-70-17.16-74H218q5 38 14 73.5t23 70.5Zm344 344q35.1 14.24 71.55 22.62Q707-225 744-220v-90l-75-16-70 70ZM255-600Zm344 344Z"/></svg>Contact : +62895883422221</a>
+                    
+                  </li>
+                  <li>
+                    <a href="https://github.com/noitsume" >
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#0000F5"><path d="M336-240 96-480l240-240 51 51-189 189 189 189-51 51Zm288 0-51-51 189-189-189-189 51-51 240 240-240 240Z"/></svg>Github : noitsume</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+        <section class="section">
+        <div class="container">
+           <h2>I'm available for work</h2>
+           <span><a href="mailto:contact@borstein.com">noitsume@gmail.com</a> | +62895883422221</span>
+        </div>
+     </section>
+     
+     <div class="section">
+       <div class="container">
+         <span class="ds-copyright">© 2025 All right reserved. <br><a href="#" target="_blanck"></span>
+       </div>
+    </div>
+    </footer>
+
+    <!-- to make "the tab changing page", use this java code from bootstrap and just follow my code structure from line 180 to 285 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
